@@ -18,6 +18,7 @@ $('.section').each(function(index, el) {
 
 $('#content').pagepiling({
   anchors: sections,
+  keyboardScrolling: false,
 	afterLoad: function(anchorLink, index){
     addAnimation('#'+anchorLink);
     setTimeout(function() {

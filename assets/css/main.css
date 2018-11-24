@@ -157,8 +157,9 @@ a {
   text-align: center;
 }
 
-
-
+#gallery {
+  margin: auto;
+}
 
 /* responsive code */
 @media (max-width: 1199.98px) {
