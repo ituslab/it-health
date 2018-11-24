@@ -8,7 +8,8 @@ function addAnimation(parent) {
   $(parent+' .animasi-scroll-topright').show().addClass('animasi-in-topright')
   $(parent+' .animasi-scroll-bottomleft').show().addClass('animasi-in-bottomleft')
   $(parent+' .animasi-scroll-bottomright').show().addClass('animasi-in-bottomright')
-  $(parent+' .animasi-scroll-zoom').show().addClass('animasi-in-zoom')
+  $(parent+' .animasi-scroll-zoomin').show().addClass('animasi-in-zoomin')
+  $(parent+' .animasi-scroll-zoomout').show().addClass('animasi-in-zoomout')
 }
 
 function removeAnimation(parent) {
@@ -39,7 +40,10 @@ function removeAnimation(parent) {
   $(parent+' .animasi-scroll-bottomright').fadeOut('slow', function() {
     $(parent+' .animasi-scroll-bottomright').removeClass('animasi-in-bottomright')
   })
-  $(parent+' .animasi-scroll-zoom').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-zoom').removeClass('animasi-in-zoom')
+  $(parent+' .animasi-scroll-zoomin').fadeOut('slow', function() {
+    $(parent+' .animasi-scroll-zoomin').removeClass('animasi-in-zoomin')
+  })
+  $(parent+' .animasi-scroll-zoomout').fadeOut('slow', function() {
+    $(parent+' .animasi-scroll-zoomout').removeClass('animasi-in-zoomout')
   })
 }
