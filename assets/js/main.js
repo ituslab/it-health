@@ -16,7 +16,6 @@ $('.section').each(function(index, el) {
 $('#content').pagepiling({
   anchors: sections,
 	afterLoad: function(anchorLink, index){
-    console.log(sections);
     addAnimation('#'+anchorLink);
     setTimeout(function() {
       if (anchorLink !== 'section-1') {
