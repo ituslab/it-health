@@ -105,9 +105,27 @@
     </div>
 
   </div>
+
+  <div id="modal-wrapper">
+    <div id="modal-content">
+      <h3 id="modal-title">Modal title</h3>
+      <div id="modal-main">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
   <!-- konten -->
   <script type="text/javascript" src="assets/js/animation.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
+  <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+  </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnvZnMUERWi8IQJkiI9Dj3hPjAjgCopus&callback=initMap"
     async defer></script>
 </body>

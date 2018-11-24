@@ -4,6 +4,7 @@ $(window).on('load', function() {
     $('.preloader-container').fadeOut('slow', function() {
       addAnimation('#section-1');
     });
+    $('#modal-wrapper').hide();
   }, 500);
 })
 
@@ -31,10 +32,20 @@ $('#content').pagepiling({
 // API KEY
 // AIzaSyDnvZnMUERWi8IQJkiI9Dj3hPjAjgCopus
 
-function initMap(){
-
-}
+// function initMap(){
+//   var map;
+//   map = new google.maps.Map(document.getElementById('map'), {
+//     center: {lat: -34.397, lng: 150.644},
+//     zoom: 8
+//   });
+// }
 
 function cariDokter() {
-  
+  $('#modal-wrapper').show();
 }
+
+$(window).click(function(ev){
+  if(ev.target.id === 'modal-wrapper') {
+    $('#modal-wrapper').hide();
+  }
+});
