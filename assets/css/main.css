@@ -102,7 +102,11 @@ a {
 
 #modal-title {
   padding: 15px;
+  background-color: yellowgreen;
+  color: white;
+  font-family: 'Patrick Hand', cursive;
 }
+
 #modal-main {
   padding: 15px;
 }
@@ -113,7 +117,14 @@ a {
 }
 
 #btn-cari-dokter {
-  
+  padding: 18px;
+  background-color: yellowgreen;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 
