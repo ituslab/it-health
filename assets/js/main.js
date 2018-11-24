@@ -4,3 +4,5 @@ $(window).on('load', function() {
     $('body').removeClass('disable-scroll');
   }, 500);
 })
+
+$('#content').pagepiling();
