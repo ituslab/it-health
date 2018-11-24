@@ -16,7 +16,6 @@ $('.section').each(function(index, el) {
 $('#content').pagepiling({
   anchors: sections,
 	afterLoad: function(anchorLink, index){
-    console.log(sections);
     addAnimation('#'+anchorLink);
     setTimeout(function() {
       if (anchorLink !== 'section-1') {
@@ -28,6 +27,3 @@ $('#content').pagepiling({
     removeAnimation('#section-'+index);
   }
 });
-
-// API KEY
-// AIzaSyDnvZnMUERWi8IQJkiI9Dj3hPjAjgCopus
