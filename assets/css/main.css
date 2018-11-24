@@ -1,3 +1,7 @@
+a {
+  color: white;
+}
+
 .nav {
   position: fixed;
   z-index: 20;
@@ -11,7 +15,9 @@
 .nav-item {
   display: inline-block;
   margin: 15px 0 15px 20px;
-  background: yellow;
+  background-color: crimson;
+  color: white;
+  font-family: 'Righteous', cursive;
   padding: 10px 15px;
   border-radius: 5px;
 }
@@ -63,7 +69,11 @@
 }
 
 #section-4{
-  background-color: #76FF03;
+  background-image: url('../img/bg1.jpeg');
+}
+
+#section-5 {
+
 }
 
 .section-center{
@@ -93,7 +103,7 @@
     padding-right: 45px;
   }
   .section-center{
-    padding: 0 25px;
+    padding: 0 45px;
   }
   .section-text {
     font-size: 1rem;
