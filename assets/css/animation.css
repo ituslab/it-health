@@ -8,7 +8,8 @@
 .animasi-scroll-topright,
 .animasi-scroll-bottomleft,
 .animasi-scroll-bottomright,
-.animasi-scroll-zoom{
+.animasi-scroll-zoomin,
+.animasi-scroll-zoomout{
   visibility: hidden
 }
 
@@ -57,9 +58,13 @@
   position: relative;
   animation: animasibottomright 800ms;
 }
-.animasi-in-zoom{
+.animasi-in-zoomin{
   visibility: visible;
-  animation: animasizoom 1s;
+  animation: animasizoomin 1s;
+}
+.animasi-in-zoomout{
+  visibility: visible;
+  animation: animasizoomout 1s;
 }
 .animasi-fade{
   visibility: visible;
@@ -154,9 +159,16 @@
     opacity: 1;
   }
 }
-@keyframes animasizoom{
+@keyframes animasizoomin{
   from{
     transform: scale(0);
+  } to{
+    transform: scale(1);
+  }
+}
+@keyframes animasizoomout{
+  from{
+    transform: scale(2);
   } to{
     transform: scale(1);
   }

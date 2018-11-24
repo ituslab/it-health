@@ -35,13 +35,13 @@ a {
 }
 
 .section {
+  overflow: hidden;
   color: #FFF;
   background-size: cover;
   background-position: center;
 }
 
 .section-content {
-  overflow: hidden;
   padding-left: 15px;
   width: 500px;
 }
