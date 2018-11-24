@@ -5,4 +5,11 @@ $(window).on('load', function() {
   }, 500);
 })
 
-$('#content').pagepiling();
+$('#content').pagepiling({
+		afterLoad: function(anchorLink, index){
+      console.log('afterLoad called...');
+    },
+});
+
+
+

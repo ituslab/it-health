@@ -17,12 +17,40 @@
 }
 
 .section {
-  text-align: center;
   color: #FFF;
 }
 
+.section-content {
+  padding-left: 15px;
+  width: 500px;
+}
+
+.section-title {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 2.5rem;
+}
+
+.section-text {
+  margin: 15px 0;
+  font-family: 'Righteous', cursive;
+  font-size: 1.5rem;
+}
+
+.overlay{
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
 #section-1{
-  background-color: #18FFFF;
+  background-image: url('../img/health3.jpg');
+  background-size: cover;
 }
 
 #section-2{
@@ -36,3 +64,29 @@
 #section-4{
   background-color: #76FF03;
 }
+
+
+/* responsive code */
+@media (max-width: 1199.98px) { 
+  
+}
+
+@media (max-width: 991.98px) { 
+  
+}
+
+@media (max-width: 767.98px) { 
+  
+}
+
+@media (max-width: 575.98px) { 
+  .section-content {
+    width: 100%;
+    padding-right: 45px;
+  }
+  .section-text {
+    font-size: 1rem;
+  }
+}
+
+/* responsive code */
