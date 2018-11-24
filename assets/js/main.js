@@ -1,10 +1,12 @@
+$('#modal-wrapper').hide();
+
+
 $(window).on('load', function() {
   setTimeout(function() {
     $('body').removeClass('disable-scroll');
     $('.preloader-container').fadeOut('slow', function() {
       addAnimation('#section-1');
     });
-    $('#modal-wrapper').hide();
   }, 500);
 })
 
@@ -36,8 +38,9 @@ $('#content').pagepiling({
 // AIzaSyC7TsXuBXKU53brJn5sQSlXzjk-yOx-WOA
 
 var markers = [];
-
 var map = null;
+var whichObjectToSearch = null;
+
 
 function initMap(){
 
@@ -66,9 +69,9 @@ function initMap(){
         lng:lng
       });
       map.setZoom(8);
-      deleteAllMarkers();
 
-      searchNearbyPlaces(location, 'doctor');
+      deleteAllMarkers();
+      searchNearbyPlaces(location, whichObjectToSearch);
   });
 }
 
@@ -127,6 +130,7 @@ function onGetResponse(results, status) {
 
 
 function reinitMap(){
+  whichObjectToSearch = null;
   $('#autoCompleteInput').val('');
   deleteAllMarkers();
   var uluru = {lat: -25.344, lng: 131.036};
@@ -140,7 +144,16 @@ function reinitMap(){
 
 function cariDokter() {
   $('#modal-wrapper').show();
+  $('#modal-title').text('Cari dokter dalam radius (1000 meter)');
+  whichObjectToSearch = 'doctor';
 }
+
+function cariRumahSakit() {
+  $('#modal-wrapper').show();
+  $('#modal-title').text('Cari rumah sakit dalam radius (1000 meter)');
+  whichObjectToSearch = 'hospital';
+}
+
 
 $(window).click(function(ev){
   if(ev.target.id === 'modal-wrapper') {

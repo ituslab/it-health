@@ -116,7 +116,7 @@ a {
   padding: 10px;
 }
 
-#btn-cari-dokter {
+.btn-cari{
   padding: 18px;
   background-color: yellowgreen;
   border-radius: 3px;

@@ -75,10 +75,11 @@
       <div class="section-content">
           <h2 class="section-title animasi-scroll-top">Cari dokter</h2>
           <p class="section-text animasi-scroll-bottom">
-            Di sini, anda bisa mencari lokasi dokter dari lokasi anda sekarang
+            Di sini, anda bisa mencari lokasi dokter 
+            berdasarkan lokasi yang anda masukkan
           </p>
           <div>
-            <button id="btn-cari-dokter" onclick="cariDokter()">Cari dokter</button>
+            <button class="btn-cari" id="btn-cari-dokter" onclick="cariDokter()">Cari dokter</button>
           </div>
       </div>
     </div>
@@ -99,8 +100,11 @@
       <div class="section-content">
         <h2 class="section-title animasi-scroll-zoomin">Cari rumah sakit</h2>
         <p class="section-text animasi-scroll-zoomout">
-          Selain mencari dokter, anda bisa mencari rumah sakit berdasarkan lokasi anda sekarang
+          Selain mencari dokter, anda bisa mencari rumah sakit berdasarkan lokasi yang anda cari
         </p>
+        <div>
+            <button class="btn-cari" id="btn-cari-rs" onclick="cariRumahSakit()">Cari rumah sakit</button>
+        </div>
       </div>
     </div>
 
@@ -108,10 +112,10 @@
 
   <div id="modal-wrapper">
     <div id="modal-content">
-      <h3 id="modal-title">Cari dokter dalam radius (1000 meter)</h3>
+      <h3 id="modal-title"></h3>
       <div id="modal-main">
         <div>
-          <input type="text" id="autoCompleteInput"/>
+          <input type="text" placeholder="Masukkan lokasi anda" id="autoCompleteInput"/>
         </div>
         <div id="map"></div>
       </div>
