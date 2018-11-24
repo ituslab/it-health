@@ -78,7 +78,7 @@
             Di sini, anda bisa mencari lokasi dokter dari lokasi anda sekarang
           </p>
           <div>
-            <button onclick="cariDokter()">Cari dokter</button>
+            <button id="btn-cari-dokter" onclick="cariDokter()">Cari dokter</button>
           </div>
       </div>
     </div>
@@ -108,8 +108,11 @@
 
   <div id="modal-wrapper">
     <div id="modal-content">
-      <h3 id="modal-title">Modal title</h3>
+      <h3 id="modal-title">Cari dokter dalam radius (1000 meter)</h3>
       <div id="modal-main">
+        <div>
+          <input type="text" id="autoCompleteInput"/>
+        </div>
         <div id="map"></div>
       </div>
     </div>
@@ -117,17 +120,11 @@
   <!-- konten -->
   <script type="text/javascript" src="assets/js/animation.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
-  <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnvZnMUERWi8IQJkiI9Dj3hPjAjgCopus&callback=initMap"
-    async defer></script>
+  <script
+      type="text/javascript" 
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7TsXuBXKU53brJn5sQSlXzjk-yOx-WOA&libraries=places&callback=initMap"
+      >
+    </script>
 </body>
 
 </html>
