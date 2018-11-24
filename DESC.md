@@ -1,0 +1,6 @@
+## Dampak industri 4.0 di bidang kesehatan
+---
+
+Banyak penyedia layanan kesehatan mengeksplorasi potensi
+telemedicine, yaitu suatu pemantauan dan pengobatan pasien dari jarak jauh melalui sensor yang tersambung ke internet. Diharapkan bahwa
+telemedicine akan terbukti sangat berharga dalam pengobatan penyakit kronis yang banyak dialami oleh lansia. Kedepannya, adalah sangat dimungkinkan bahwa warga senior menerima cek-up medis dengan kenyamanan bahkan di rumah mereka sendiri. Telemedicine juga dapat membawa perawatan medis kepada masyarakat di lokasi terpencil. Di masa depan, beberapa aplikasi medis yang sangat hebat muncul dari kombinasi teknologi fisika, digital dan biologi termasuk pil yang menggabungkan sensor digital untuk mengatur pelepasan obat; anggota badan robot yang menanggapi pikiran pasien; serta psikoterapi secara virtual reality. Secara global, semua teknologi ini diharapkan oleh banyak pihak untuk dapat berdampak besar bagi kesehatan, seperti halnya ketika penggunaan ilmu statistik diterapkan pada semua bidang ilmu lainnya di akhir abad ke-19. Tentu saja, sebuah revolusi yang mendalam sepertinya akan memaksa penyedia layanan kesehatan untuk secara substansial mengadaptasi praktik kerja mereka.
