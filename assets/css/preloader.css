@@ -15,7 +15,7 @@
   height: 100px;
 }
 
-.loader__bar {
+.loader-bar {
   position: absolute;
   bottom: 0;
   width: 10px;
@@ -26,7 +26,7 @@
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-.loader__bar:nth-child(1) {
+.loader-bar:nth-child(1) {
   left: 0px;
   -webkit-transform: scale(1, 0.2);
   transform: scale(1, 0.2);
@@ -34,7 +34,7 @@
   animation: barUp1 4s infinite;
 }
 
-.loader__bar:nth-child(2) {
+.loader-bar:nth-child(2) {
   left: 15px;
   -webkit-transform: scale(1, 0.4);
   transform: scale(1, 0.4);
@@ -42,7 +42,7 @@
   animation: barUp2 4s infinite;
 }
 
-.loader__bar:nth-child(3) {
+.loader-bar:nth-child(3) {
   left: 30px;
   -webkit-transform: scale(1, 0.6);
   transform: scale(1, 0.6);
@@ -50,7 +50,7 @@
   animation: barUp3 4s infinite;
 }
 
-.loader__bar:nth-child(4) {
+.loader-bar:nth-child(4) {
   left: 45px;
   -webkit-transform: scale(1, 0.8);
   transform: scale(1, 0.8);
@@ -58,7 +58,7 @@
   animation: barUp4 4s infinite;
 }
 
-.loader__bar:nth-child(5) {
+.loader-bar:nth-child(5) {
   left: 60px;
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
@@ -66,7 +66,7 @@
   animation: barUp5 4s infinite;
 }
 
-.loader__ball {
+.loader-ball {
   position: absolute;
   bottom: 10px;
   left: 0;

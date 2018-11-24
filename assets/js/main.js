@@ -7,12 +7,19 @@ $(window).on('load', function() {
   }, 500);
 })
 
+var sections = [];
+
+$('.section').each(function(index, el) {
+  sections.push('section-'+(index + 1));
+});
+
 $('#content').pagepiling({
-  anchors: ['section-1', 'section-2', 'section-3', 'section-4'],
+  anchors: sections,
 	afterLoad: function(anchorLink, index){
+    console.log(sections);
     addAnimation('#'+anchorLink);
     setTimeout(function() {
-      if (anchorLink != 'section-1') {
+      if (anchorLink !== 'section-1') {
         removeAnimation('#section-1');
       }
     }, 500)
