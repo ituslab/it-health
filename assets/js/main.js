@@ -31,3 +31,11 @@ $('#content').pagepiling({
 
 // API KEY
 // AIzaSyDnvZnMUERWi8IQJkiI9Dj3hPjAjgCopus
+
+function initMap(){
+
+}
+
+function cariDokter() {
+  
+}
