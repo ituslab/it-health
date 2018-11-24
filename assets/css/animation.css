@@ -1,0 +1,174 @@
+/* ANIMASI in SCROLL */
+.animasi-scroll-opacity,
+.animasi-scroll-top,
+.animasi-scroll-right,
+.animasi-scroll-bottom,
+.animasi-scroll-left,
+.animasi-scroll-topleft,
+.animasi-scroll-topright,
+.animasi-scroll-bottomleft,
+.animasi-scroll-bottomright,
+.animasi-scroll-zoom{
+  visibility: hidden
+}
+
+/* ANIMASI CLASS in-view */
+.animasi-in-opacity{
+  visibility: visible;
+  animation: animasiopacity 3s;
+}
+.animasi-in-top{
+  visibility: visible;
+  position: relative;
+  animation: animasitop 800ms;
+}
+.animasi-in-right{
+  visibility: visible;
+  position: relative;
+  animation: animasiright 800ms;
+}
+.animasi-in-bottom{
+  visibility: visible;
+  position: relative;
+  animation: animasibottom 800ms;
+}
+.animasi-in-left{
+  visibility: visible;
+  position: relative;
+  animation: animasileft 800ms;
+}
+.animasi-in-topleft{
+  visibility: visible;
+  position: relative;
+  animation: animasitopleft 800ms;
+}
+.animasi-in-topright{
+  visibility: visible;
+  position: relative;
+  animation: animasitopright 800ms;
+}
+.animasi-in-bottomleft{
+  visibility: visible;
+  position: relative;
+  animation: animasibottomleft 800ms;
+}
+.animasi-in-bottomright{
+  visibility: visible;
+  position: relative;
+  animation: animasibottomright 800ms;
+}
+.animasi-in-zoom{
+  visibility: visible;
+  animation: animasizoom 1s;
+}
+.animasi-fade{
+  visibility: visible;
+  animation: animasifading 3s infinite;
+}
+
+/* Keyframes */
+@keyframes animasiopacity{
+  from{
+    opacity:0;
+  } to{
+    opacity:1;
+  }
+}
+@keyframes animasitop{
+  from{
+    top: -300px;
+    opacity: 0;
+  } to{
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animasiright{
+  from{
+    right: -300px;
+    opacity: 0;
+  } to{
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes animasibottom{
+  from{
+    bottom: -300px;
+    opacity: 0;
+  } to{
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes animasileft{
+  from{
+    left: -300px;
+    opacity: 0;
+  } to{
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes animasitopleft{
+  from{
+    top: -300px;
+    left: -300px;
+    opacity: 0;
+  } to{
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes animasitopright{
+  from{
+    top: -300px;
+    right: -300px;
+    opacity: 0;
+  } to{
+    top: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes animasibottomleft{
+  from{
+    bottom: -300px;
+    left: -300px;
+    opacity: 0;
+  } to{
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes animasibottomright{
+  from{
+    bottom: -300px;
+    right: -300px;
+    opacity: 0;
+  } to{
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes animasizoom{
+  from{
+    transform: scale(0);
+  } to{
+    transform: scale(1);
+  }
+}
+@keyframes animasifading{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
