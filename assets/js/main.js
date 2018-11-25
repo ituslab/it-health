@@ -59,6 +59,8 @@ function initMap(){
   autocomplete.addListener('place_changed',function(){
       var place = autocomplete.getPlace();
 
+      console.log(place);
+
       var location = place.geometry.location;
 
       var lat = location.lat();
@@ -146,6 +148,12 @@ function cariDokter() {
   $('#modal-wrapper').show();
   $('#modal-title').text('Cari dokter dalam radius (1000 meter)');
   whichObjectToSearch = 'doctor';
+}
+
+function cariApotik(){
+  $('#modal-wrapper').show();
+  $('#modal-title').text('Cari apotik dalam radius (1000 meter)');
+  whichObjectToSearch = 'pharmacy';
 }
 
 function cariRumahSakit() {
