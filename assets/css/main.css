@@ -25,6 +25,13 @@ a {
   padding: 15px;
 }
 
+#responsive-nav-menu {
+  display: none;
+  color: white;
+  padding: 15px;
+  float: right;
+}
+
 .nav-menu > li {
   display: inline-block;
 }
@@ -186,6 +193,15 @@ a {
 }
 
 @media (max-width: 575.98px) {
+  .nav-menu {
+    display: none;
+  }
+
+  #responsive-nav-menu {
+    display: block;
+    cursor: pointer;
+  }
+
   .section-content {
     width: 100%;
     padding-right: 45px;

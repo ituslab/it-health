@@ -68,7 +68,7 @@ function initMap(){
         lat:lat,
         lng:lng
       });
-      map.setZoom(18);
+      map.setZoom(10);
 
       deleteAllMarkers();
       searchNearbyPlaces(location, whichObjectToSearch);
