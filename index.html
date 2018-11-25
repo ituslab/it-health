@@ -67,14 +67,16 @@
 
     <div class="section" id="section-3">
       <div class="overlay"></div>
-      <div class="section-content">
+      <div class="section-content section-center">
           <h2 class="section-title animasi-scroll-top">Cari dokter</h2>
           <p class="section-text animasi-scroll-bottom">
             Di sini, anda bisa mencari lokasi dokter
             berdasarkan lokasi yang anda masukkan
           </p>
           <div class="animasi-scroll-zoomout">
-            <button class="btn-cari" id="btn-cari-dokter" onclick="cariDokter()">Cari dokter</button>
+            <button class="btn-cari" id="btn-cari-dokter" onclick="cariDokter()">
+              <i class="fas fa-search"></i> Cari dokter
+            </button>
           </div>
       </div>
     </div>
@@ -102,7 +104,9 @@
           Selain mencari dokter, anda bisa mencari rumah sakit berdasarkan lokasi yang anda cari
         </p>
         <div class="animasi-scroll-bottomright">
-            <button class="btn-cari" id="btn-cari-rs" onclick="cariRumahSakit()">Cari rumah sakit</button>
+            <button class="btn-cari" id="btn-cari-rs" onclick="cariRumahSakit()">
+            <i class="fas fa-hospital"></i>  Cari rumah sakit
+            </button>
         </div>
       </div>
     </div>
@@ -110,7 +114,7 @@
   </div>
 
   <div id="modal-wrapper">
-    <div id="modal-content">
+    <div id="modal-content" class="animasi-scroll-zoomout">
       <h3 id="modal-title"></h3>
       <div id="modal-main">
         <div>

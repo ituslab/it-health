@@ -109,7 +109,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 35px;
 }
 
 #modal-content {
@@ -147,11 +147,11 @@ a {
 
 
 #section-1{
-  background-image: url('../img/health2.jpg');
+  background-image: url('../img/medical2.jpg');
 }
 
 #section-2{
-  background-image: url('../img/health3.jpg');
+  background-image: url('../img/medical1.jpg');
 }
 
 #section-3{

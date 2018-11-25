@@ -1,6 +1,5 @@
 $('#modal-wrapper').hide();
 
-
 $(window).on('load', function() {
   setTimeout(function() {
     $('body').removeClass('disable-scroll');
@@ -146,6 +145,7 @@ function reinitMap(){
 
 function cariDokter() {
   $('#modal-wrapper').show();
+  $('#modal-wrapper > #modal-content').addClass('animasi-in-zoomout');
   $('#modal-title').text('Cari dokter dalam radius (1000 meter)');
   whichObjectToSearch = 'doctor';
 }
@@ -158,14 +158,14 @@ function cariApotik(){
 
 function cariRumahSakit() {
   $('#modal-wrapper').show();
+  $('#modal-wrapper > #modal-content').addClass('animasi-in-zoomout');
   $('#modal-title').text('Cari rumah sakit dalam radius (1000 meter)');
   whichObjectToSearch = 'hospital';
 }
 
-
 $(window).click(function(ev){
   if(ev.target.id === 'modal-wrapper') {
-      $('#modal-wrapper').hide();
+      $('#modal-wrapper').fadeOut();
       reinitMap();
   }
 });
