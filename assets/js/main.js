@@ -57,9 +57,6 @@ function initMap(){
 
   autocomplete.addListener('place_changed',function(){
       var place = autocomplete.getPlace();
-
-      console.log(place);
-
       var location = place.geometry.location;
 
       var lat = location.lat();
@@ -84,14 +81,59 @@ function setAllMap(currVal){
   });
 }
 
+function callbackPlaceDetails(place,status) {
+    console.log(place,status);
+}
+
+function requestPlaceDetails(placeId){
+  var request = {
+    placeId: placeId,
+    fields: ['name','formatted_phone_number', 'photo','opening_hours','website']
+  };
+  
+  var service = new google.maps.places.PlacesService(map);
+  service.getDetails(request, callbackPlaceDetails);  
+}
+
+
+function onClickedMarker(e) {
+  var currentMarkerLatLng = e.latLng;
+
+  var cLat = currentMarkerLatLng.lat();
+  var cLng = currentMarkerLatLng.lng();
+
+  var filteredResult = arrOfPlaceDetailsReq
+    .filter(function(e){
+        var eLat = e.position.lat();
+        var eLng = e.position.lng();
+
+        return eLat === cLat && cLng === eLng;
+    });
+
+  var singleResult = filteredResult[0];
+  console.log(singleResult);
+  
+}
+
+var arrOfPlaceDetailsReq = [];
+
+
 function addAllMarkers(arrOfLocation) {
 
-  arrOfLocation.forEach(function(a){
+  arrOfLocation.forEach(function(a,idx){
       var newMarkers = new google.maps.Marker({
         position: a.latlng,
         map: map,
         title: a.name
       });
+
+      arrOfPlaceDetailsReq.push({
+        placeId:a.placeId,
+        name:a.name,
+        position:a.latlng
+      });
+
+      newMarkers.addListener('click',onClickedMarker);
       markers.push(newMarkers);
   });
 }
@@ -117,6 +159,8 @@ function onGetResponse(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     var mappedResult = results.map(function(r){
       return {
+        placeId:r.place_id,
+        alamat:r.vicinity,
         latlng:new google.maps.LatLng(
           r.geometry.location.lat(),
           r.geometry.location.lng()
@@ -126,6 +170,8 @@ function onGetResponse(results, status) {
     });
 
     addAllMarkers(mappedResult);
+  }else {
+    console.log(status , results);
   }
 }
 
@@ -152,6 +198,7 @@ function cariDokter() {
 
 function cariApotik(){
   $('#modal-wrapper').show();
+  $('#modal-wrapper > #modal-content').addClass('animasi-in-zoomout');
   $('#modal-title').text('Cari apotik dalam radius (1000 meter)');
   whichObjectToSearch = 'pharmacy';
 }
