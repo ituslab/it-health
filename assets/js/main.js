@@ -283,6 +283,11 @@ $(window).click(function(ev){
   }
 });
 
+$('.menu-item').on('click', function() {
+  $(this).fadeOut('slow');
+  $('.menu-overlay').fadeOut('slow');
+})
+
 $(window).click(function(ev){
   if(ev.target.id === 'modal-detail-wrapper') {
       $('#modal-detail-wrapper').fadeOut();
