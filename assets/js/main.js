@@ -1,4 +1,5 @@
 $('#modal-wrapper').hide();
+$('#modal-detail-wrapper').hide();
 
 $(window).on('load', function() {
   setTimeout(function() {
@@ -29,6 +30,25 @@ $('#content').pagepiling({
     removeAnimation('#section-'+index);
   }
 });
+
+$('#modal-close').on('click', function() {
+  $('#modal-wrapper').fadeOut();
+  reinitMap();
+})
+
+$('#responsive-nav-menu').on('click', function() {
+  $('#menu-close').fadeIn('slow');
+  $('.menu-overlay').fadeIn('slow');
+});
+
+$('#menu-close').on('click', function() {
+  $(this).fadeOut('slow');
+  $('.menu-overlay').fadeOut('slow');
+});
+
+$('#modal-detail-close').on('click', function() {
+  $('#modal-detail-wrapper').fadeOut();
+})
 
 // Google map API KEY
 // AIzaSyDnvZnMUERWi8IQJkiI9Dj3hPjAjgCopus
@@ -82,8 +102,6 @@ function setAllMap(currVal){
 }
 
 function callbackPlaceDetails(place,status) {
-    console.log(place,status);
-
     var initPhoneNumber = 'Tidak ada nomor';
     var initPlaceName = 'Nama tempat tidak diketahui';
     var isOpenNowPropsExists = null;
@@ -102,9 +120,29 @@ function callbackPlaceDetails(place,status) {
         isOpenNowPropsExists = place.opening_hours.weekday_text;
     }
 
-    console.log(initPhoneNumber , initPlaceName , isOpenNowPropsExists);
+    // console.log(initPhoneNumber , initPlaceName , isOpenNowPropsExists);
 
+    $('#detail-nama').text(initPlaceName);
+    $('#detail-telp').text(initPhoneNumber);
+
+    $('#detail-jadwal').empty();
     
+    if(!isOpenNowPropsExists) {
+      $('#detail-jadwal').text('Jadwal tidak diketahui');
+    } else {
+      var createUl = document.createElement('ul');
+
+      isOpenNowPropsExists.forEach(function(v){
+          var newLi = document.createElement('li');
+          newLi.innerHTML = v;
+
+          createUl.append(newLi);
+      });
+
+      $('#detail-jadwal').append(createUl);
+    }
+
+    $('#modal-detail-wrapper').show();
 }
 
 function requestPlaceDetails(placeId){
@@ -118,9 +156,9 @@ function requestPlaceDetails(placeId){
       'website'
     ]
   };
-  
+
   var service = new google.maps.places.PlacesService(map);
-  service.getDetails(request, callbackPlaceDetails);  
+  service.getDetails(request, callbackPlaceDetails);
 }
 
 
@@ -243,5 +281,11 @@ $(window).click(function(ev){
   if(ev.target.id === 'modal-wrapper') {
       $('#modal-wrapper').fadeOut();
       reinitMap();
+  }
+});
+
+$(window).click(function(ev){
+  if(ev.target.id === 'modal-detail-wrapper') {
+      $('#modal-detail-wrapper').fadeOut();
   }
 });

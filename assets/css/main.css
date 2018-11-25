@@ -2,6 +2,46 @@ a {
   color: white;
 }
 
+.menu-overlay {
+  position: fixed;
+  display: none;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 999;
+  padding-top: 200px;
+}
+
+#menu-close {
+  position: fixed;
+  display: none;
+  z-index: 1000;
+  right: 0;
+  padding: 15px;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu-overlay .menu-item {
+  text-align: center;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #FFF;
+  padding: 15px 0;
+  transition: all 500ms ease-in-out;
+}
+
+.menu-overlay .menu-item:hover {
+  background: rgba(255, 255, 255, .55);
+  color: #000;
+}
+
+
 .preloader-container {
   position: fixed;
   z-index: 19;
@@ -91,6 +131,52 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+#modal-detail-wrapper {
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 35px;
+}
+
+#modal-detail-content p {
+  font-family: 'Righteous', cursive;
+}
+
+#modal-detail-content {
+  background-color: #fff;
+  color: #000;
+  width: 500px;
+}
+
+#modal-detail-title {
+  padding: 15px;
+  background-color: rgba(29, 191, 219, .7);
+  color: white;
+  font-family: 'Patrick Hand', cursive;
+}
+
+#modal-detail-main {
+  padding: 15px;
+}
+
+#modal-detail-footer {
+  padding: 5px 10px;
+  text-align: right;
+}
+
+#modal-detail-close {
+  background-color: grey;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
 
 #map {
   width: 100%;
@@ -120,7 +206,7 @@ a {
 
 #modal-title {
   padding: 15px;
-  background-color: yellowgreen;
+  background-color: rgba(29, 191, 219, .7);
   color: white;
   font-family: 'Patrick Hand', cursive;
 }
@@ -128,6 +214,18 @@ a {
 #modal-main {
   padding: 15px;
 }
+
+#modal-footer {
+  padding: 5px 10px;
+  text-align: right;
+}
+
+#modal-close {
+  background-color: grey;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
 #autoCompleteInput {
   display: block;
   width: 100%;
@@ -136,9 +234,9 @@ a {
 
 .btn-cari{
   padding: 18px;
-  background-color: yellowgreen;
+  background-color: rgba(29, 191, 219, .7);
   border-radius: 3px;
-  color: white;
+  color: #FFF;
   border: none;
   font-family: 'Patrick Hand', cursive;
   font-size: 1.2rem;

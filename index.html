@@ -25,6 +25,17 @@
 </head>
 
 <body class="disable-scroll">
+
+  <!-- responseive menu -->
+  <a id="menu-close" href="#"><i class="fas fa-3x fa-times"></i></a>
+  <div class="menu-overlay">
+    <div class="menu">
+      <a class="menu-item" href="#"><i class="fas fa-home"></i>&nbsp;Home</a>
+      <a class="menu-item" href="#"><i class="fas fa-images"></i>&nbsp;Galeri</a>
+    </div>
+  </div>
+  <!-- responseive menu -->
+
   <!-- navmenu -->
   <nav class="nav">
     <ul class="nav-menu">
@@ -121,6 +132,26 @@
           <input type="text" placeholder="Masukkan lokasi anda" id="autoCompleteInput"/>
         </div>
         <div id="map"></div>
+        <br />
+        <div id="modal-footer">
+          <a id="modal-close" href="#">Tutup</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-detail-wrapper">
+    <div id="modal-detail-content">
+      <h3 id="modal-detail-title">Detail Tempat</h3>
+      <div id="modal-detail-main">
+        <p>Nama : <span id="detail-nama"></span></p>
+        <br />
+        <p>No-Telp : <span id="detail-telp"></span></p>
+        <br />
+        <p>Jadwal Buka : <span id="detail-jadwal"></span></p>
+        <div id="modal-detail-footer">
+          <a id="modal-detail-close" href="#">Tutup</a>
+        </div>
       </div>
     </div>
   </div>
