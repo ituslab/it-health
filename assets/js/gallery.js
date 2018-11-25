@@ -1,7 +1,7 @@
 $('#gallery').jR3DCarousel({
   controls: true,
-  width : 700,
-	height: 500,
+  width : 525,
+	height: 400,
 	animation: "slide3D",
   navigation: 'circles',
   slideClass: 'img-slide'
@@ -16,7 +16,7 @@ $('#gallery').magnificPopup({
 	image: {
 		verticalFit: true,
 		titleSrc: function(item) {
-			return item.el.attr('title') + ' &middot;';
+			return item.el.attr('title');
 		}
 	},
 	gallery: {

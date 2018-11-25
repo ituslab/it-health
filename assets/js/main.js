@@ -18,7 +18,6 @@ $('.section').each(function(index, el) {
 
 $('#content').pagepiling({
   anchors: sections,
-  keyboardScrolling: false,
 	afterLoad: function(anchorLink, index){
     addAnimation('#'+anchorLink);
     setTimeout(function() {
@@ -56,12 +55,12 @@ function initMap(){
   var autoCompleteInputEl = document.getElementById('autoCompleteInput');
   var autocomplete = new google.maps.places.Autocomplete(autoCompleteInputEl);
 
-  
+
   autocomplete.addListener('place_changed',function(){
       var place = autocomplete.getPlace();
 
       var location = place.geometry.location;
-      
+
       var lat = location.lat();
       var lng = location.lng();
 
@@ -124,7 +123,7 @@ function onGetResponse(results, status) {
         name:r.name
       }
     });
-    
+
     addAllMarkers(mappedResult);
   }
 }

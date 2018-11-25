@@ -1,49 +1,27 @@
+var animations = {
+  'animasi-scroll-opacity': 'animasi-in-opacity',
+  'animasi-scroll-top': 'animasi-in-top',
+  'animasi-scroll-right': 'animasi-in-right',
+  'animasi-scroll-bottom': 'animasi-in-bottom',
+  'animasi-scroll-left': 'animasi-in-left',
+  'animasi-scroll-topleft': 'animasi-in-topleft',
+  'animasi-scroll-topright': 'animasi-in-topright',
+  'animasi-scroll-bottomleft': 'animasi-in-bottomleft',
+  'animasi-scroll-bottomright': 'animasi-in-bottomright',
+  'animasi-scroll-zoomin': 'animasi-in-zoomin',
+  'animasi-scroll-zoomout': 'animasi-in-zoomout'
+}
+
 function addAnimation(parent) {
-  $(parent+' .animasi-scroll-opacity').show().addClass('animasi-in-opacity')
-  $(parent+' .animasi-scroll-top').show().addClass('animasi-in-top')
-  $(parent+' .animasi-scroll-right').show().addClass('animasi-in-right')
-  $(parent+' .animasi-scroll-bottom').show().addClass('animasi-in-bottom')
-  $(parent+' .animasi-scroll-left').show().addClass('animasi-in-left')
-  $(parent+' .animasi-scroll-topleft').show().addClass('animasi-in-topleft')
-  $(parent+' .animasi-scroll-topright').show().addClass('animasi-in-topright')
-  $(parent+' .animasi-scroll-bottomleft').show().addClass('animasi-in-bottomleft')
-  $(parent+' .animasi-scroll-bottomright').show().addClass('animasi-in-bottomright')
-  $(parent+' .animasi-scroll-zoomin').show().addClass('animasi-in-zoomin')
-  $(parent+' .animasi-scroll-zoomout').show().addClass('animasi-in-zoomout')
+  for (var animation in animations) {
+    $(parent+' .'+animation).show().addClass(animations[animation]);
+  }
 }
 
 function removeAnimation(parent) {
-  $(parent+' .animasi-scroll-opacity').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-opacity').removeClass('animasi-in-opacity');
-  });
-  $(parent+' .animasi-scroll-top').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-top').removeClass('animasi-in-top')
-  });
-  $(parent+' .animasi-scroll-right').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-right').removeClass('animasi-in-right')
-  })
-  $(parent+' .animasi-scroll-bottom').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-bottom').removeClass('animasi-in-bottom')
-  })
-  $(parent+' .animasi-scroll-left').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-left').removeClass('animasi-in-left')
-  })
-  $(parent+' .animasi-scroll-topleft').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-topleft').removeClass('animasi-in-topleft')
-  })
-  $(parent+' .animasi-scroll-topright').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-topright').removeClass('animasi-in-topright')
-  })
-  $(parent+' .animasi-scroll-bottomleft').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-bottomleft').removeClass('animasi-in-bottomleft')
-  })
-  $(parent+' .animasi-scroll-bottomright').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-bottomright').removeClass('animasi-in-bottomright')
-  })
-  $(parent+' .animasi-scroll-zoomin').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-zoomin').removeClass('animasi-in-zoomin')
-  })
-  $(parent+' .animasi-scroll-zoomout').fadeOut('slow', function() {
-    $(parent+' .animasi-scroll-zoomout').removeClass('animasi-in-zoomout')
-  })
+  for (var animation in animations) {
+    $(parent+' .'+animation).fadeOut('slow', function() {
+      $(parent+' .'+animation).removeClass(animations[animation]);
+    });
+  }
 }
