@@ -131,6 +131,52 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+#modal-detail-wrapper {
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 35px;
+}
+
+#modal-detail-content p {
+  font-family: 'Righteous', cursive;
+}
+
+#modal-detail-content {
+  background-color: #fff;
+  color: #000;
+  width: 500px;
+}
+
+#modal-detail-title {
+  padding: 15px;
+  background-color: yellowgreen;
+  color: white;
+  font-family: 'Patrick Hand', cursive;
+}
+
+#modal-detail-main {
+  padding: 15px;
+}
+
+#modal-detail-footer {
+  padding: 5px 10px;
+  text-align: right;
+}
+
+#modal-detail-close {
+  background-color: grey;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
 
 #map {
   width: 100%;

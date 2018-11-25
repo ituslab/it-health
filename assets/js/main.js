@@ -1,4 +1,5 @@
 $('#modal-wrapper').hide();
+$('#modal-detail-wrapper').hide();
 
 $(window).on('load', function() {
   setTimeout(function() {
@@ -44,6 +45,10 @@ $('#menu-close').on('click', function() {
   $(this).fadeOut('slow');
   $('.menu-overlay').fadeOut('slow');
 });
+
+$('#modal-detail-close').on('click', function() {
+  $('#modal-detail-wrapper').fadeOut();
+})
 
 // Google map API KEY
 // AIzaSyDnvZnMUERWi8IQJkiI9Dj3hPjAjgCopus
@@ -105,9 +110,9 @@ function requestPlaceDetails(placeId){
     placeId: placeId,
     fields: ['name','formatted_phone_number', 'photo','opening_hours','website']
   };
-  
+
   var service = new google.maps.places.PlacesService(map);
-  service.getDetails(request, callbackPlaceDetails);  
+  service.getDetails(request, callbackPlaceDetails);
 }
 
 
@@ -127,7 +132,7 @@ function onClickedMarker(e) {
 
   var singleResult = filteredResult[0];
   console.log(singleResult);
-  
+
 }
 
 var arrOfPlaceDetailsReq = [];
@@ -229,5 +234,11 @@ $(window).click(function(ev){
   if(ev.target.id === 'modal-wrapper') {
       $('#modal-wrapper').fadeOut();
       reinitMap();
+  }
+});
+
+$(window).click(function(ev){
+  if(ev.target.id === 'modal-detail-wrapper') {
+      $('#modal-detail-wrapper').fadeOut();
   }
 });
