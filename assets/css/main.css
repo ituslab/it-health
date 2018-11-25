@@ -158,7 +158,7 @@ a {
 
 #modal-detail-title {
   padding: 15px;
-  background-color: yellowgreen;
+  background-color: rgba(29, 191, 219, .7);
   color: white;
   font-family: 'Patrick Hand', cursive;
 }
@@ -206,7 +206,7 @@ a {
 
 #modal-title {
   padding: 15px;
-  background-color: yellowgreen;
+  background-color: rgba(29, 191, 219, .7);
   color: white;
   font-family: 'Patrick Hand', cursive;
 }
@@ -234,9 +234,9 @@ a {
 
 .btn-cari{
   padding: 18px;
-  background-color: yellowgreen;
+  background-color: rgba(29, 191, 219, .7);
   border-radius: 3px;
-  color: white;
+  color: #FFF;
   border: none;
   font-family: 'Patrick Hand', cursive;
   font-size: 1.2rem;
