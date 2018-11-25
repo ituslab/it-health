@@ -114,8 +114,8 @@ function callbackPlaceDetails(place,status) {
       initPhoneNumber = place.formatted_phone_number;
     }
 
-    if(place.opening_hours 
-      && 
+    if(place.opening_hours
+      &&
       place.opening_hours.weekday_text) {
         isOpenNowPropsExists = place.opening_hours.weekday_text;
     }
@@ -126,7 +126,7 @@ function callbackPlaceDetails(place,status) {
     $('#detail-telp').text(initPhoneNumber);
 
     $('#detail-jadwal').empty();
-    
+
     if(!isOpenNowPropsExists) {
       $('#detail-jadwal').text('Jadwal tidak diketahui');
     } else {
@@ -143,6 +143,7 @@ function callbackPlaceDetails(place,status) {
     }
 
     $('#modal-detail-wrapper').show();
+    $('#modal-detail-wrapper > #modal-detail-content').addClass('animasi-in-zoomin');
 }
 
 function requestPlaceDetails(placeId){
@@ -150,7 +151,7 @@ function requestPlaceDetails(placeId){
     placeId: placeId,
     fields: [
       'name',
-      'formatted_phone_number', 
+      'formatted_phone_number',
       'photo',
       'opening_hours',
       'website'
