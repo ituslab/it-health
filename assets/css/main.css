@@ -169,6 +169,10 @@ a {
   padding: 15px;
 }
 
+#detail-jadwal li {
+  list-style-type: none;
+}
+
 #modal-detail-footer {
   padding: 5px 10px;
   text-align: right;
