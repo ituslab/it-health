@@ -304,7 +304,9 @@ a {
 }
 
 @media (max-width: 575.98px) {
-
+  #map {
+    height: 250px;
+  }
   .section-content {
     width: 100%;
     padding-right: 45px;
