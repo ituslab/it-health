@@ -30,6 +30,21 @@ $('#content').pagepiling({
   }
 });
 
+$('#modal-close').on('click', function() {
+  $('#modal-wrapper').fadeOut();
+  reinitMap();
+})
+
+$('#responsive-nav-menu').on('click', function() {
+  $('#menu-close').fadeIn('slow');
+  $('.menu-overlay').fadeIn('slow');
+});
+
+$('#menu-close').on('click', function() {
+  $(this).fadeOut('slow');
+  $('.menu-overlay').fadeOut('slow');
+});
+
 // Google map API KEY
 // AIzaSyDnvZnMUERWi8IQJkiI9Dj3hPjAjgCopus
 
