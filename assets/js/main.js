@@ -120,8 +120,6 @@ function callbackPlaceDetails(place,status) {
         isOpenNowPropsExists = place.opening_hours.weekday_text;
     }
 
-    // console.log(initPhoneNumber , initPlaceName , isOpenNowPropsExists);
-
     $('#detail-nama').text(initPlaceName);
     $('#detail-telp').text(initPhoneNumber);
 
