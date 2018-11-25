@@ -83,12 +83,40 @@ function setAllMap(currVal){
 
 function callbackPlaceDetails(place,status) {
     console.log(place,status);
+
+    var initPhoneNumber = 'Tidak ada nomor';
+    var initPlaceName = 'Nama tempat tidak diketahui';
+    var isOpenNowPropsExists = null;
+
+    if(place.name) {
+      initPlaceName = place.name;
+    }
+
+    if(place.formatted_phone_number) {
+      initPhoneNumber = place.formatted_phone_number;
+    }
+
+    if(place.opening_hours 
+      && 
+      place.opening_hours.weekday_text) {
+        isOpenNowPropsExists = place.opening_hours.weekday_text;
+    }
+
+    console.log(initPhoneNumber , initPlaceName , isOpenNowPropsExists);
+
+    
 }
 
 function requestPlaceDetails(placeId){
   var request = {
     placeId: placeId,
-    fields: ['name','formatted_phone_number', 'photo','opening_hours','website']
+    fields: [
+      'name',
+      'formatted_phone_number', 
+      'photo',
+      'opening_hours',
+      'website'
+    ]
   };
   
   var service = new google.maps.places.PlacesService(map);
@@ -107,12 +135,13 @@ function onClickedMarker(e) {
         var eLat = e.position.lat();
         var eLng = e.position.lng();
 
-        return eLat === cLat && cLng === eLng;
+        return eLat === cLat && eLng === cLng;
     });
 
   var singleResult = filteredResult[0];
-  console.log(singleResult);
-  
+  var selectedPlaceId = singleResult.placeId;
+
+  requestPlaceDetails(selectedPlaceId);
 }
 
 var arrOfPlaceDetailsReq = [];
