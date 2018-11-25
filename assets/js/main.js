@@ -284,7 +284,7 @@ $(window).click(function(ev){
 });
 
 $('.menu-item').on('click', function() {
-  $(this).fadeOut('slow');
+  $('#menu-close').fadeOut('slow');
   $('.menu-overlay').fadeOut('slow');
 })
 
