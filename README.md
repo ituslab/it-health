@@ -1,4 +1,5 @@
-# Health-Loc4.0 App (VALTER - Web Design Competition 2018)
+# Health-Loc4.0 App
+### VALTER - Web Design Competition 2018
 
 ## Fonts used
 ---
