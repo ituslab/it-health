@@ -14,6 +14,8 @@
   - font-family: 'Righteous', cursive;
 
 
+## NO CSS FRAMEWORK USED
+
 ## jQuery Plugin Used
 ---
 
